@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Convertor {
+
+    public int FarenheitToCelsius (int x){
+        int Celsius = (((x - 32) * 5) / 9);
+    return Celsius;}
+
+    public int CelsiusToFarenheit (int y){
+        int Farenheit = (((y * 9)/5+32));
+        return Farenheit;}
+
+
+        public static void main(String[] args) {
+Convertor x = new Convertor();
+Scanner b = new Scanner(System.in);
+Scanner c = new Scanner(System.in);
+for (int i = 0; i <10; i++) {
+            System.out.println("Выберите тип конвертации. Введите \"фаренгейт\" или \"цельсий\". Для прекращения работы программы введите \"выход\".");
+
+            String g = b.nextLine();
+
+            if (g.equals("фаренгейт")){
+                System.out.println("Введи число для конвертации: ");
+                System.out.println("Результат: " + x.CelsiusToFarenheit(c.nextInt()));}
+
+    else if (g.equals("цельсий")){
+        System.out.println("Введи число для конвертации: ");
+        System.out.println("Результат: " + x.FarenheitToCelsius(c.nextInt()));}
+
+    else if (g.equals("выход")){
+        System.out.println("Конец программы.");
+       System.exit(0);
+    }
+    }}
+            }
+
+
+
+
+
