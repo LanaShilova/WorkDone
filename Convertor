@@ -26,11 +26,11 @@ while (!flag) { try{
             String g = b.nextLine();
 
             if (g.equals("фаренгейт")){
-                System.out.println("Введи число для конвертации: ");
+                System.out.println("Введите число для конвертации: ");
                 System.out.println("Результат: " + x.celsiusToFarenheit(c.nextInt()));}
 
     else if (g.equals("цельсий")){
-        System.out.println("Введи число для конвертации: ");
+        System.out.println("Введите число для конвертации: ");
         System.out.println("Результат: " + x.farenheitToCelsius(c.nextInt()));}
 
     else if (g.equals("выход")){
@@ -39,7 +39,7 @@ while (!flag) { try{
        flag = true;
     }
     } catch(InputMismatchException e){
-    System.out.println("Не похоже на число :)");
+    System.out.println("Cтранное число :) Попробуйте еще раз");
 }
             }}}
 
