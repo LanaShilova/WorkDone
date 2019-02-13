@@ -1,40 +1,47 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
 public class Convertor {
+private static boolean flag = false;
+private int celsius;
+private int farenheit;
+    public int farenheitToCelsius (int x){
 
-    public int FarenheitToCelsius (int x){
-        int Celsius = (((x - 32) * 5) / 9);
-    return Celsius;}
+        celsius = (((x - 32) * 5) / 9);
+    return celsius;}
 
-    public int CelsiusToFarenheit (int y){
-        int Farenheit = (((y * 9)/5+32));
-        return Farenheit;}
+    public int celsiusToFarenheit (int y){
+        int farenheit = (((y * 9)/5+32));
+        return farenheit;}
 
 
         public static void main(String[] args) {
 Convertor x = new Convertor();
 Scanner b = new Scanner(System.in);
 Scanner c = new Scanner(System.in);
-for (int i = 0; i <10; i++) {
+while (!flag) { try{
             System.out.println("Выберите тип конвертации. Введите \"фаренгейт\" или \"цельсий\". Для прекращения работы программы введите \"выход\".");
 
             String g = b.nextLine();
 
             if (g.equals("фаренгейт")){
                 System.out.println("Введи число для конвертации: ");
-                System.out.println("Результат: " + x.CelsiusToFarenheit(c.nextInt()));}
+                System.out.println("Результат: " + x.celsiusToFarenheit(c.nextInt()));}
 
     else if (g.equals("цельсий")){
         System.out.println("Введи число для конвертации: ");
-        System.out.println("Результат: " + x.FarenheitToCelsius(c.nextInt()));}
+        System.out.println("Результат: " + x.farenheitToCelsius(c.nextInt()));}
 
     else if (g.equals("выход")){
         System.out.println("Конец программы.");
        System.exit(0);
+       flag = true;
     }
-    }}
-            }
-
+    } catch(InputMismatchException e){
+    System.out.println("Не похоже на число :)");
+}
+            }}}
 
 
 
