@@ -4,16 +4,12 @@ import java.util.Scanner;
 
 public class Convertor {
 private static boolean flag = false;
-private int celsius;
-private int farenheit;
-    public int farenheitToCelsius (int x){
 
-        celsius = (((x - 32) * 5) / 9);
-    return celsius;}
+    public int farenheitToCelsius (int x){
+    return (x - 32) * 5/9;}
 
     public int celsiusToFarenheit (int y){
-        int farenheit = (((y * 9)/5+32));
-        return farenheit;}
+        return y * 9/5+32;}
 
 
         public static void main(String[] args) {
