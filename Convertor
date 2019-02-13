@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 
 public class Convertor {
-private static boolean flag = false;
 
     public int farenheitToCelsius (int x){
     return (x - 32) * 5/9;}
@@ -13,10 +12,11 @@ private static boolean flag = false;
 
 
         public static void main(String[] args) {
+       
 Convertor x = new Convertor();
 Scanner b = new Scanner(System.in);
 Scanner c = new Scanner(System.in);
-while (!flag) { try{
+while (true) { try{
             System.out.println("Выберите тип конвертации. Введите \"фаренгейт\" или \"цельсий\". Для прекращения работы программы введите \"выход\".");
 
             String g = b.nextLine();
@@ -31,8 +31,7 @@ while (!flag) { try{
 
     else if (g.equals("выход")){
         System.out.println("Конец программы.");
-       System.exit(0);
-       flag = true;
+      break;
     }
     } catch(InputMismatchException e){
     System.out.println("Cтранное число :) Попробуйте еще раз");
